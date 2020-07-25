@@ -1,12 +1,21 @@
 name: 'generate-changelog-action'
 description: 'GitHub Action for lob/generate-changelog'
 author: 'Scott Brenner'
+inputs:
+  repo:
+    description: 'repo'
+    required: false
+  tag:
+    description: 'generate from specific tag or range (e.g. v1.2.3 or v1.2.3..v1.2.4)'
+    required: false
 outputs:
   changelog:
     description: 'Generate changelog'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.tag }}
 branding:
   icon: 'edit'
   color: 'gray-dark'
