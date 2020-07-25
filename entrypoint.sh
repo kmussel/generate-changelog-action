@@ -10,7 +10,9 @@ fi
 
 if [ -z "$INPUT_REPO" ]; then INPUT_REPO="$GITHUB_REPOSITORY"; fi
 
+echo "RUN DI = $RUN_DIRECTORY"
 
+pwd
 # if [ -n "$INPUT_TAG" ]; then ARG_TAG="-t $INPUT_TAG"; fi
 
 # git clone --quiet https://github.com/$REPO &> /dev/null

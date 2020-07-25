@@ -14,8 +14,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.tag }}
 branding:
   icon: 'edit'
   color: 'gray-dark'
